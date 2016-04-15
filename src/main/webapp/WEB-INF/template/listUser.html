@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Home</title>
+</head>
+<body>
+	<table>
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>用户名</th>
+			<th>密码密文</th>
+			<th>部门</th>
+			<th>操作</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr th:each="user:${users}">
+			<td th:text="${user.id}"></td>
+			<td th:text="${user.username}"></td>
+			<td th:text="${user.password}"></td>
+			<td th:text="${user.department.name}"></td>
+			<td ><a th:href="@{'/views/user/detail/'+${user.username}}">详情</a></td>
+		</tr>
+	</tbody>
+	</table>
+	<p><a th:href="@{/datas/user/list}">JSON数据</a></p>
+	<p><a th:href="@{/}">首页</a></p>
+</body>
+</html>

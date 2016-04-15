@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Home</title>
+</head>
+<body>
+<p th:text="'UserId : ' + ${userId==null?'':userId}"> </p>
+<form th:action="@{/views/user/add}"  method="post">
+	<p>user : <input type="text" name="username" /></p>
+	<p>password : <input type="text" name="password" /></p>
+	<p><input type="submit" value="提交"/><input type="reset" value="清除"/></p>
+</form>
+</body>
+</html>

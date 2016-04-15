@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Home</title>
+</head>
+<body>
+	<table>
+	<tbody>
+		<tr><td>ID</td><td th:text="${user.id}"></td></tr>	
+		<tr><td>用户名</td><td th:text="${user.username}"></td></tr>
+		<tr><td>密码密文</td><td th:text="${user.password}"></td></tr>
+		<tr><td>部门</td><td th:text="${user.department.name}"></td></tr>
+	</tbody>
+	</table>
+</body>
+<p><a th:href="@{'/datas/user/detail/'+${user.id}}">JSON数据</a></p>
+</html>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache>
+	<diskStore path="java.io.tmpdir"/>
+	
+	<defaultCache
+            maxElementsInMemory="10000"
+            eternal="false"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120"
+            overflowToDisk="true"
+            maxElementsOnDisk="10000000"
+            diskPersistent="false"
+            diskExpiryThreadIntervalSeconds="120"
+            memoryStoreEvictionPolicy="LRU"
+            />
+<!-- 
+	<cache
+		name="com.newhouse.hibernate.Factory"
+		maxEntriesLocalHeap="10000"
+		eternal="false"
+		timeToIdleSeconds="300"
+		timeToLiveSeconds="3000"
+		overflowToDisk="true">
+	</cache>
+	
+	<cache
+		name="org.hibernate.cache.StandardQueryCache"
+		maxEntriesLocalHeap="5000"
+		eternal="false"
+		timeToLiveSeconds="120"
+		overflowToDisk="true">
+	</cache>
+	<cache
+		name="org.hibernate.cache.UpdateTimestampsCache"
+		maxEntriesLocalHeap="5000"
+		eternal="true"
+		overflowToDisk="true">
+	</cache>
+	<cache name="org.hibernate.cache.spi.UpdateTimestampsCache"
+		maxElementsInMemory="5000" 
+		eternal="true" 
+		overflowToDisk="true" >
+    </cache>
+ -->
+ 
+     <cache name="user" overflowToDisk="true" />  
+     <cache name="listUser" overflowToDisk="true" />
+ 
+</ehcache>

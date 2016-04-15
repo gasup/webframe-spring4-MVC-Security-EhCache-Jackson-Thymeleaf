@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Home</title>
+</head>
+<body>
+<h1>
+	Hello world! 你好  
+</h1>
+
+<P th:text="'The time on the server is '+${serverTime}+'.'">   </P>
+<p><a th:href="@{/login}">登录</a>  <a th:href="@{/views/user/addView}">添加用户</a><a th:href="@{/views/user/list}">列出用户</a></p>
+
+</body>
+</html>
